@@ -1,4 +1,4 @@
-
+#%%
 import pandas as pd
 import numpy as np 
 from datetime import datetime
@@ -52,9 +52,9 @@ def extract_data_from_rows(items: element.ResultSet) -> list[dict]:
         discount_in_percent = int(discount_in_percent)
         price_in_brl = float(price_in_brl) / 100
         rating_in_percent = float(rating_in_percent)
-        end_time_in_seconds = int(end_time_in_seconds)
-        start_time_in_second = int(start_time_in_second)
-        release_time_in_second = int(release_time_in_second)
+        end_time_in_seconds = datetime.fromtimestamp(int(end_time_in_seconds))
+        start_time_in_second = datetime.fromtimestamp(int(start_time_in_second))
+        release_time_in_second = datetime.fromtimestamp(int(release_time_in_second))
 
         items_data.append(
             {
