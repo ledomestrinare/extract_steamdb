@@ -1,0 +1,9 @@
+__pycache__/
+.venv
+logs/
+*.ps1
+*.sh
+*.json
+test.*
+.vscode/
+documents/
